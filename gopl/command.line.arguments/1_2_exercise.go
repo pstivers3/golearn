@@ -4,14 +4,14 @@
 package main
 
 import (
-	"fmt"
-	"os"
+    "fmt"
+    "os"
 )
 
 func main() {
-	index := 1
-	for _, arg := range os.Args[1:] {
-	    fmt.Println(index,arg)
-		index++
-	}
+    index := 1
+    for _, arg := range os.Args[1:] {
+        fmt.Println(index,arg)
+        index++
+    }
 }

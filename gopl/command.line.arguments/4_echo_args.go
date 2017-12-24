@@ -4,10 +4,10 @@
 package main
 
 import (
-	"fmt"
-	"os"
+    "fmt"
+    "os"
 )
 
 func main() {
-	fmt.Println(os.Args[1:])
+    fmt.Println(os.Args[1:])
 }
