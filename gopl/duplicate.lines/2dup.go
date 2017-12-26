@@ -18,8 +18,8 @@ func main() {
         for _, arg := range files {
             f, err := os.Open(arg)
             if err != nil {
-                fmt.Fprintf(os.Stderr, "dup2: %v\n", err)
-                continue
+                fmt.Fprintf(os.Stderr, "2dup: %v\n", err)
+                continue // goes to the next iteration of the for loop
             }
             countLines(f, counts)
             f.Close()
