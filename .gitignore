@@ -1,0 +1,8 @@
+# next 3 lines ignores all files without a .go extension
+**/*
+!**/*.go
+!**/
+!.gitignore
+gopl/gopl.io
+src
+
