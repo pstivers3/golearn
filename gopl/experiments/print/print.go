@@ -6,6 +6,6 @@ import (
 )
 
 func main() {
-    fmt.Printf("%v\n", os.Stderr)
+  fmt.Printf("%v\n", os.Stderr)
 }
 
