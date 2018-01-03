@@ -1,7 +1,9 @@
 // prints the content found at a URL
 // usage:
+// $ go run filename.go <url>, for example http://gopl.io
+// or 
 // $ go build filename.go
-// $ ./filename <url>, for example http://gopl.io
+// $ ./filename <url>
 
 package main
 
