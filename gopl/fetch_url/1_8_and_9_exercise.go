@@ -2,10 +2,7 @@
 // add the prefix http:// to each argument URL if it is missing
 // also print the HTTP status code, found in resp.Status
 // usage:
-// $ go run filename.go <url>, for example http://gopl.io
-// or 
-// $ go build filename.go
-// $ ./filename <url>
+// $ go run filename.go <space delimited urls>, for example http://gopl.io or gopl.io
 
 package main
 

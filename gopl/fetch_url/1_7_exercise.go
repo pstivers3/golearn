@@ -1,10 +1,7 @@
 // prints the content found at a URL
 // use io.Copy instead of ioutil.ReadAll
 // usage:
-// $ go run filename.go <url>, for example http://gopl.io
-// or
-// $ go build filename.go
-// $ ./filename <url> 
+// $ go run filename.go <space delimited urls>, for example http://gopl.io
 
 package main
 
