@@ -3,5 +3,6 @@
 !**/*.go
 !**/
 !.gitignore
-gopl/gopl.io
+gopl/examples
+gopl/exercises
 
