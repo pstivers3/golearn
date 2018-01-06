@@ -10,9 +10,8 @@ import (
     "io"
     "math"
     "math/rand"
-//	"fmt"
-//	"log"
 	"net/http"
+	"log"
 )
 
 var palette = []color.Color{color.White, color.Black} //compostite literal slice
@@ -23,20 +22,11 @@ const (
 )
 
 func main () {
-//	http.HandleFunc("/", handler) // each request calls handler
-//	log.Fatal(http.ListenAndServe("localhost:8000", nil))
-
-    // display lissajous figures in the web browser
-    handler := func(w http.ResponseWriter, r *http.Request) {
+	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 	    lissajous(w)
-    }
-    http.HandleFunc("/", handler)
+    })
+	log.Fatal(http.ListenAndServe("localhost:8000", nil))
 }
-
-//handler echoes the Path component of the requested URL
-//func handler(w http.ResponseWriter, r *http.Request) {
-//	fmt.Fprintf(w, "URL.Path = %q\n", r.URL.Path)
-//}
 
 func lissajous(out io.Writer) {
     const (
@@ -64,5 +54,4 @@ func lissajous(out io.Writer) {
     }
 	gif.EncodeAll(out, &anim) // Note: ignoring encoding errors
 }
-
 
