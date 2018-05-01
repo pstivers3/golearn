@@ -11,7 +11,7 @@ func main () {
 }
 
 func incr(p *int) int {
-	*p++ // increments what p points to; does not change p
+	*p++ // increments the value stored in p (an alias for v) 
 	return *p
 }
 
