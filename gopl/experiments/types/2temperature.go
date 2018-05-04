@@ -4,7 +4,8 @@ import "fmt"
 
 func main() {
 	var c Celsius = 100
-	fmt.Println(c)
+	fmt.Println(c)  // 100°C
+	fmt.Println(7)  // 7
 }
 
 type Celsius float64
