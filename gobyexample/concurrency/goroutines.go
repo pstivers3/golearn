@@ -11,14 +11,13 @@ func f(from string) {
 func main() {
 	f("direct")
 
-	go f("goroutine")
+	go f("goroutine") // this doesn't run without the anonymous func below ?? q
 
-	/*
 	go func (msg string) {
 		fmt.Println(msg)
 	}("going")
 
 	fmt.Scanln()
 	fmt.Println("done")
-	*/
+
 }
