@@ -2,14 +2,6 @@ package main
 
 import "fmt"
 
-func incI() func() int {
-	i := 0
-	return func() int {
-	    i++
-		return i
-	}
-}
-
 func main() {
 	i := incI()
 	fmt.Println(i())
@@ -19,5 +11,13 @@ func main() {
 	fmt.Println(incI()) // why do these return a memory location?
 	fmt.Println(incI())
 	fmt.Println(incI())
+}
+
+func incI() func() int {
+	i := 0
+	return func() int {
+	    i++
+		return i
+	}
 }
 
