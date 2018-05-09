@@ -9,6 +9,6 @@ func main() {
 }
 
 type Celsius float64
-func (c Celsius) String() string { // ???
+func (c Celsius) String() string { // How does this work ?? q
 	return fmt.Sprintf("%g°C", c)
 }

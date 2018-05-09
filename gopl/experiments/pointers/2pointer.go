@@ -9,7 +9,7 @@ func main () {
 	fmt.Println(f()) // mem address 1
 	fmt.Println(f()) // mem address 2
 	fmt.Println(p)   // mem address 3
-	fmt.Println(p)   // mem address 3. Why not a 4th address ??
+	fmt.Println(p)   // mem address 3. Why not a 4th address ?? q
 }
 
 func f() *int {
