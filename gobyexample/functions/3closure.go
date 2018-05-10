@@ -2,6 +2,7 @@ package main
 
 import "fmt"
 
+// returns 2 anonumous funcs. One anon func returns and int, the other doesn't return anything
 func counter(start int) (func() int, func()) {
 	ctr := func() int {
 		return start

@@ -2,6 +2,7 @@ package main
 
 import "fmt"
 
+// returns an array of anonymous funcs ?? q
 func functions1() []func() {
 	arr := []int{1, 2, 3, 4}
 	result := make([]func(), 0)

@@ -7,6 +7,7 @@ func printMessage(message string) {
 }
 
 // returns an anonymous function
+// the anonymous func doesn't return anything. It prints a message
 func getPrintMessage() func(string) {
 	return func(message string) {
 		fmt.Println(message)
@@ -19,7 +20,5 @@ func main() {
 
 	// anonymous function
 	printcaller := getPrintMessage()
-	printcaller("printed from called anonymous function") // how does this work?
-	// this doesn't work because the named function doesn't take an argument
-	// getPrintMessage("printed from called anonymous function")
+	printcaller("printed from called anonymous function") // how does this work ?? q
 }
