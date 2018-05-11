@@ -7,16 +7,17 @@ import (
 
 func Sqrt(x float64) float64 {
 	z := 1.0
-	i := 1
-	fmt.Println(math.Abs(z*z - x))
-	for math.Abs(z*z - x) > 0.01 || i < 10 {
+	acc_err := 0.01
+	fmt.Printf("\n%14s %20s %20s\n", "estimate", "est squared", "error")
+	for math.Abs(z*z - x) > acc_err {
 		z -= (z*z - x) / (2*z)
-		fmt.Println("z:",z, "delta:", (z*z - x))
-		i++
+		fmt.Printf("%14.5f %20.5f %20.5f\n", z , z*z, (z*z - x))
 	}
 	return z
 }
 
 func main() {
-	fmt.Println(Sqrt(24))
+	x := float64(2); fmt.Printf("\n  Square root of %.2f = %.4f\n", x, Sqrt(x))
+	x = float64(200); fmt.Printf("\n  Square root of %.2f = %.4f\n", x, Sqrt(x))
+	x = float64(10000); fmt.Printf("\n  Square root of %.2f = %.4f\n\n", x, Sqrt(x))
 }
