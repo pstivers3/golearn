@@ -3,10 +3,9 @@ package main
 import "fmt"
 
 func main() {
-
-    i := 1
-    for i <= 3 {
-        fmt.Println(i)
-        i = i + 2
-    }
+	// conditional is checked at the top of the loop
+	for i := 0; i < 5; i++ {
+		fmt.Println(i)
+		// i increments at the bottom of the loop
+	}
 }
