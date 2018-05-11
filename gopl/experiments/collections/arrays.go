@@ -3,7 +3,6 @@ package main
 import "fmt"
 
 func main() {
-    fmt.Println("*** Arrays ***\n")
     var s [10]string
     s[0] = "one"
     s[1] = "two"
@@ -20,20 +19,4 @@ func main() {
     fmt.Println("s[0:3]: ", s[0:3], "\n")
 
     fmt.Println("lenth of s is ", len(s), "\n")
-
-    fmt.Println("*** maps ***\n")
-
-    m := map[string]int {
-        "a": 1,
-        "b": 2,
-        "c": 3,
-    }
-
-    for key, value := range m {
-        fmt.Println ("key: ", key, ", value: ", value)
-    }
-
-    fmt.Println ("\n", "m[\"a\"] : ", m["a"])
-    m["a"]++
-    fmt.Println ("m[\"a\"]++ : ", m["a"])
 }
