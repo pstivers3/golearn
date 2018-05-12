@@ -27,4 +27,6 @@ func main() {
 
 	fmt.Println(c)
 	fmt.Println(c[2:4]) // print a slice of c, from low to excluding high. Remember index starts at zero. 
+	cs := c[2:4] // store slice of c in cs
+	fmt.Println(cs[0]) // outputs "c"
 }
