@@ -19,8 +19,7 @@ func main() {
     }
 
 	s := []string{"a","b","c"}
-
-	// make a copy of s into c
+	// make c and then copy of s into c
 	c := make([]string, len(s))
 	copy(c, s)
 	c = append(c, "d","e")
