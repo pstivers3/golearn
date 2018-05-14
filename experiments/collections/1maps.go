@@ -10,10 +10,10 @@ func main() {
     }
 
     for key, value := range m {
-        fmt.Println ("key: ", key, ", value: ", value)
+        fmt.Printf ("key: %s, value: %d\n", key, value)
     }
 
-    fmt.Println ("\n", "m[\"a\"] : ", m["a"])
+    fmt.Println ("\nm[\"a\"] : ", m["a"])
     m["a"]++
     fmt.Println ("m[\"a\"]++ : ", m["a"])
 }
