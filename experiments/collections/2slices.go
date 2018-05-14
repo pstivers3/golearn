@@ -12,4 +12,5 @@ func main() {
 	fmt.Println(sata)
 	sat[0] = 22
 	fmt.Println(sat)
+	fmt.Println(a)
 }
