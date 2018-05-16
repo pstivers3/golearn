@@ -1,3 +1,8 @@
+// methods and functions that take a pointer argument
+// funcs that take a pointer argument must take a pointer pointer when called
+// methods that take a pointer argument can take either a pointer of value when called 
+//   because the call argument is interpreted as a pointer if the receiver type is a pointer
+
 package main
 
 import "fmt"
@@ -33,4 +38,7 @@ func main() {
 	p.persScaleMethod(2)
 	fmt.Println(returnTwoFloats(tf1)) // 6 12 
 	fmt.Println(persScaleFunc(&tf1, 2)) // 12 24
+
+	fmt.Println(persScaleFunc(&tf1, 2)) // 24 48
+	// fmt.Println(persScaleFunc(tf1, 2)) // throws an exception as expected. 
 }
