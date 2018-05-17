@@ -6,7 +6,7 @@ type rectangle struct {
 	width, height int
 }
 
-// area method with receiver type of *rectanble (pointer to rectangle struct)`
+// area method with receiver type of *rectangle (pointer to rectangle struct)`
 func (r *rectangle) area() int {
 	return r.width * r.height
 }
