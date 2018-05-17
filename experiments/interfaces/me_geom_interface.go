@@ -41,7 +41,6 @@ func params(g geom) {
 	fmt.Println(g)
 	fmt.Println("area: ", g.area())
 	fmt.Println("perim: ", g.perim())
-	// return area, perim
 }
 
 func main() {
@@ -54,7 +53,4 @@ func main() {
 	fmt.Println("\ncircle")
 	params(c)
 }
-
-
-
 
