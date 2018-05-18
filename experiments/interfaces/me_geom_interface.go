@@ -44,9 +44,14 @@ func params(g geom) {
 }
 
 func main() {
-	r := rect{ length: 2, width: 4 }
+	r := rect{
+		length: 2,
+		width: 4,
+	}
 
-	c := circle{ radius: 1 }
+	c := circle{
+		radius: 1,
+	}
 
 	fmt.Println("rectangle")
 	params(r)
