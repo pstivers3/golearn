@@ -19,9 +19,9 @@ func needFloat(x float64) float64 {
 }
 
 func main() {
-	fmt.Println(needInt(Small)) // why not 2 ?? q
-	fmt.Println(needFloat(Small)) // why not 2 ?? q
 	fmt.Println(Small)
+	fmt.Println(needInt(Small))
+	fmt.Println(needFloat(Small))
 	fmt.Println(needFloat(Big))
 }
 
