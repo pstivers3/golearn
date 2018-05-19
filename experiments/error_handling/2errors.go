@@ -50,8 +50,8 @@ func main() {
 		}
 	}
 
-    // Question. Not sure how this one works ?? q
-	_,e := f2(42)
+    // not sure how this one works ?? q
+	_, e := f2(42)
 	if ae, ok := e.(*argError); ok {
 		fmt.Println(ae.arg)
 		fmt.Println(ae.prob)
