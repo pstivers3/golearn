@@ -1,3 +1,5 @@
+// from go by example
+
 package main
 
 import "fmt"
