@@ -7,7 +7,9 @@ func main() {
 	messages := make(chan string)
 
 	// send a text value into the messages channel using a go routine
-	go func() { messages <- "ping" }()
+	go func() {
+		messages <- "ping"
+	}()
 
 	// receive a value from the message channel
 	msg := <-messages
