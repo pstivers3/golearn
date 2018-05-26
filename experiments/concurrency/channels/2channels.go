@@ -1,4 +1,4 @@
-// from intruducing go
+// from introducing go
 
 package main
 
@@ -7,6 +7,7 @@ import (
 	"time"
 )
 
+// c is type channel of strings
 func pinger(c chan string) {
 	for i := 0; ; i++ {
 		c <- "ping"
@@ -29,6 +30,8 @@ func printer(c chan string) {
 
 func main() {
 	var c chan string = make(chan string)
+	// why does this initialization cause ping to get printed twice in the beginning ?? q
+	// c := make(chan string)
 	go pinger(c)
 	go ponger(c)
 	go printer(c)
