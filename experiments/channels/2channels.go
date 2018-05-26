@@ -29,9 +29,16 @@ func printer(c chan string) {
 }
 
 func main() {
-	var c chan string = make(chan string)
-	// why does this initialization cause ping to get printed twice in the beginning ?? q
-	// c := make(chan string)
+	var c chan string // channel declaration. Default value is nil
+	fmt.Println("channel c is: ", c) // nil
+	fmt.Printf("Type of c is %T\n", c)
+	c  = make(chan string)
+	fmt.Println("channel c is: ", c) // memory location ?? q
+	fmt.Printf("Type of c is %T\n", c)
+	// why does ping or pong sometimes get printed twice in the beginning ?? q
+	// may not happen with the extra code above in main 
+	// var c chan string = make(chan string) // original initialization in example
+	// c := make(chan string) // alternative initialization
 	go pinger(c)
 	go ponger(c)
 	go printer(c)
