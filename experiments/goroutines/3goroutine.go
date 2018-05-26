@@ -11,9 +11,10 @@ func f(from string) {
 }
 
 func main() {
+	// this will run first because syncronous call
 	f("direct")
-
-	go f("goroutine") // this doesn't run without the anonymous func below ?? q
+	// this will run concurently (asyncronously) with the next goroutine, so will interleave with it
+	go f("goroutine")
 
 	go func (msg string) {
 		fmt.Println(msg)
