@@ -30,16 +30,16 @@ func printer(c chan string) {
 
 func main() {
 	var c chan string // channel declaration. Default value is nil
-	fmt.Println("channel c is: ", c) // nil
-	fmt.Printf("Type of c is %T\n", c)
+	// fmt.Println("channel c is: ", c) // nil
+	// fmt.Printf("Type of c is %T\n", c) // chan string
 	c  = make(chan string)
-	fmt.Println("channel c is: ", c) // memory location ?? q
-	fmt.Printf("Type of c is %T\n", c)
+	// fmt.Println("channel c is: ", c) // memory location ?? q
+	// fmt.Printf("Type of c is %T\n", c) // chan string
 	// why does ping or pong sometimes get printed twice in the beginning ?? q
-	// may not happen with the extra code above in main 
-	// var c chan string = make(chan string) // original initialization in example
-	// c := make(chan string) // alternative initialization
+	// why does it not happen with with extra print statements above in main ?? g
+	// why does it not happen with the wait command below ?? q
 	go pinger(c)
+	// time.Sleep(time.Millisecond * 5)
 	go ponger(c)
 	go printer(c)
 	var input string
