@@ -1,3 +1,5 @@
+// from golangbot.com
+
 package main
 
 import "fmt"
