@@ -14,14 +14,11 @@ func main() {
 	fmt.Println(<-messages)
 	fmt.Println(<-messages)
 
-	// no bufer
-	ch := make (chan string)
-	// why doesn't this next line work, if comment it in, and comment out the separate goroutine below. ?? q
-	// ch <- "hello"
-	// apparently if unbuffered, sender has to be inside a separate goroutine
-	go func() {
-		 ch <- "hello"
-	}()
-
-	fmt.Println(<-ch)
+	fmt.Println("start ping pong loop")
+	for i:=0; i <3; i++ {
+		messages <- "ping"
+		fmt.Println(<-messages)
+		messages <- "pong"
+		fmt.Println(<-messages)
+	}
 }
