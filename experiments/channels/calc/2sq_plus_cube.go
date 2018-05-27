@@ -7,40 +7,40 @@ import (
     "fmt"
 )
 
-func digits(number int, dchnl chan int) {
+func digits(number int, dch chan int) {
     for number != 0 {
         digit := number % 10
-        dchnl <- digit
+        dch <- digit
         number /= 10
     }
-    close(dchnl)
+    close(dch)
 }
-func calcSquares(number int, squareop chan int) {
+func calcSquares(number int, sqch chan int) {
     sum := 0
     dch := make(chan int)
     go digits(number, dch)
     for digit := range dch {
         sum += digit * digit
     }
-    squareop <- sum
+    sqch <- sum
 }
 
-func calcCubes(number int, cubeop chan int) {
+func calcCubes(number int, cubech chan int) {
     sum := 0
     dch := make(chan int)
     go digits(number, dch)
     for digit := range dch {
         sum += digit * digit * digit
     }
-    cubeop <- sum
+    cubech <- sum
 }
 
 func main() {
     number := 123
-    sqrch := make(chan int)
+    sqch := make(chan int)
     cubech := make(chan int)
-    go calcSquares(number, sqrch)
+    go calcSquares(number, sqch)
     go calcCubes(number, cubech)
-    squares, cubes := <-sqrch, <-cubech
+    squares, cubes := <-sqch, <-cubech
     fmt.Println("Final output", squares+cubes)
 }

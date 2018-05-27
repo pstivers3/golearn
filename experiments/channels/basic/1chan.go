@@ -6,7 +6,7 @@ func main() {
 	// make a channel of type string
 	messages := make(chan string)
 
-	// send a text value into the messages channel using a go routine
+	// send a text value into the messages channel from a go routine
 	go func() {
 		messages <- "ping"
 	}()
