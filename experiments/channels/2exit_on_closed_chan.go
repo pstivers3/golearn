@@ -1,3 +1,5 @@
+// from golangbot.com
+
 package main
 
 import (
@@ -14,14 +16,10 @@ func producer(chnl chan int) {
 func main() {
     ch := make(chan int)
     go producer(ch)
-	// continuous for loop
+	// for over range of ch
 	// exits when the chan in the goroutine closes
-    for {
-        v, ok := <-ch
-        fmt.Println("Received ", v, ok)
-        if ok == false {
-			fmt.Println("channel closed, exiting for loop")
-            break
-        }
+	for  v := range ch {
+        fmt.Println("Received ", v)
     }
+	fmt.Println("channel closed, exited for loop")
 }
