@@ -20,6 +20,7 @@ type Result struct {
 var jobs = make (chan Job, 10)
 var results = make(chan Result, 10)
 
+// returns sum of the digits
 func digits(number int) int {
 	sum := 0
 	no := number
@@ -32,6 +33,7 @@ func digits(number int) int {
 	return sum
 }
 
+// continue here
 func worker(wg *sync.WaitGroup) {
 	for job := range jobs {
 		output := Result{job, digits(job.randomno)}
@@ -69,7 +71,7 @@ func result(done chan bool) {
 
 func main() {
 	startTime := time.Now()
-	noOfJobs := 100
+	noOfJobs := 50
 	go allocate(noOfJobs)
 	done := make(chan bool)
 	go result(done)

@@ -6,6 +6,7 @@ import (
 	"time"
 )
 
+// takes an integer and a pointer to a wait group
 func process(i int, wg *sync.WaitGroup) {
 	fmt.Println("started Goroutine ", i)
 	time.Sleep(2 * time.Second)
@@ -20,8 +21,8 @@ func main() {
 		wg.Add(1) // increment waitgroup counter by 1
 		go process(i, &wg)
 	}
-	// wt.Wait() blocks the Goroutine in which it's called until the counter becomes zero.
-	// so main stops here until the counter becomes zero. 
+	// Wait() blocks the Goroutine in which wg is passed, until the counter becomes zero.
+	// Therefore main stops here until the counter becomes zero. 
 	wg.Wait()
 	fmt.Println("All go routines finished executing")
 }
