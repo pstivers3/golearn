@@ -25,7 +25,7 @@ func isFactor5 (num int) bool {
 	}
 }
 
-func isBothFactors (num int) bool {
+func isFactorBoth (num int) bool {
 	if num%3 == 0 && num%5 == 0 {
 		return true
 	} else {
@@ -35,7 +35,7 @@ func isBothFactors (num int) bool {
 
 func main() {
 	for i := 1; i <= 100; i++ {
-		if isBothFactors (i) {
+		if isFactorBoth (i) {
 			fmt.Println("FizzBuzz")
 		} else if isFactor3(i) {
 			fmt.Println("Fizz")
