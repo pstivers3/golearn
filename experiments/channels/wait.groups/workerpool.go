@@ -1,3 +1,5 @@
+// from: https://golangbot.com/buffered-channels-worker-pools/
+
 package main
 
 import (
@@ -61,6 +63,7 @@ func allocate(noOfJobs int) {
 	close(jobs)
 }
 
+// done is a channel of bools
 func result(done chan bool) {
 	for result := range results {
 		fmt.Printf("Job id %d, input random no %d, sum of digits %d\n",

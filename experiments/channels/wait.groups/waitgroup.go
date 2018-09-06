@@ -1,3 +1,5 @@
+// from https://golangbot.com/buffered-channels-worker-pools/
+
 package main
 
 import (
@@ -20,10 +22,13 @@ func main() {
 	for i := 0; i < no; i++ {
 		wg.Add(1) // increment waitgroup counter by 1
 		go process(i, &wg)
+		// why do the go routines open and close out of order without this sleep ?? q
+		time.Sleep(2 * time.Second)
 	}
 	// Wait() blocks the Goroutine in which wg is passed, until the counter becomes zero.
 	// Therefore main stops here until the counter becomes zero. 
 	wg.Wait()
 	fmt.Println("All go routines finished executing")
 }
+
 
