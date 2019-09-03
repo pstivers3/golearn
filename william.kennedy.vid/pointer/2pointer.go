@@ -2,6 +2,8 @@
 
 package main
 
+import "fmt"
+
 type user struct {
 	name  string
 	email string
@@ -28,7 +30,7 @@ func CreateUserV1() user {
 	}
 
 	// print fuction is in it's own memory frame. It can not access u directly from the V1 frame.
-	println("V1", &u)
+	println("V1 mem addr of u:           ", &u)
 
 	// return a copy of u to the main memory frame and them m becomes the AF again
 	return u
@@ -41,7 +43,7 @@ func CreateUserV2() *user {
 		email: "bill@ardanlabs.com",
 	}
 
-	println("V2", &u)
+	println("V2 mem addr of u:           ", &u)
 
 	// return the memory address of u, up the stack to main
 	// the compiler will consturct u on the heap because when control is returned to main, the V2 memory frame will be destroyed
@@ -56,7 +58,8 @@ func CreateUserV3() *user {
 		email: "bill@ardanlabs.com",
 	}
 
-	println("V3", &u)
+	println("V3 mem addr of u:           ", &u)
+	println("V3 mem addr of pointer to u:", u)
 
 	// pointer symantics
 	return u
@@ -70,8 +73,11 @@ func CreateUserV4() user {
 		email: "bill@ardanlabs.com",
 	}
 
-	println("V4", &u)
+	println("V4 mem addr of u:           ", &u)
 
-	// value symantics
+	fmt.Printf("V4 value of u from pointer    :  %+v\n", u) // why doesn't this print a memory address ??
+	fmt.Printf("V4 value of u from dereference:  %+v\n", *u)
+
+	// value symantics because return type in func definition is struct, not pointer to struct
 	return *u
 }
