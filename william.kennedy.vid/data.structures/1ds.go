@@ -40,6 +40,7 @@ func main() {
 //			if list == nil {
 // // *** incomplete
 
+// mediocre speed. Does not stay neatly within cache lines
 func LinkedListTravers() int {
 	var ctr int
 
@@ -56,6 +57,7 @@ func LinkedListTravers() int {
 }
 
 // ColumnTraverse traverses the matrix linearly down each column
+// slowest and least consistent speed. Does not fit in cache lines
 func ColunnTraverse() int {
 	var ctr int
 
@@ -71,6 +73,7 @@ func ColunnTraverse() int {
 }
 
 // RowTraverse traverses the matrix linearly down each row
+// fastest. Rows fit neatly in cache lines and can move to L1 cache
 func RowTraverse() int {
 	var ctr int
 
