@@ -2,7 +2,9 @@
 **/*
 !**/*.go
 !**/
+# add back in the !(not ignore) lines
 !.gitignore
+!BOOKNAME
 gopl/gopl.io
 gopl/examples
 gopl/exercises
