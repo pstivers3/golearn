@@ -1,6 +1,6 @@
-## ignore all files
+## ignore all folders and files
 **/*
-## add back these with !(not ignore)
+## add back *.go files with !(not ignore)
 !**/*.go
-!**/
+#!**/
 !BOOKNAME
