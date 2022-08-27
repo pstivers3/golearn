@@ -17,10 +17,10 @@ func main() {
 }
 
 func flipcoin(outcome string) int {
-	//clunky but illustrates some things 
+	//clunky but illustrates some things
 	heads := 0
 	tails := 0
-	result :=0
+	result := 0
 	switch outcome {
 	case "heads":
 		heads++
@@ -43,4 +43,3 @@ func Signum(x int) int {
 		return 0
 	}
 }
-

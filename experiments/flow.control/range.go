@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func main() {
-	s := []int{6,7,8}
+	s := []int{6, 7, 8}
 	for index, value := range s { // returns the index and value if both receiving variables are specified
 		fmt.Println(index, value)
 	}
