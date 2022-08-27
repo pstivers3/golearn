@@ -1,12 +1,5 @@
-# next 3 lines ignores all files without a .go extension
-**/*
-!**/*.go
-!**/
-# add back in the !(not ignore) lines
-!.gitignore
+## ignore all files
+*
+## add back these with !(not ignore)
+!*.go
 !BOOKNAME
-gopl/gopl.io
-gopl/examples
-gopl/exercises
-gwp/sample.code
-
