@@ -1,6 +1,10 @@
+## order matters
+## ! == not ignore
 ## ignore all folders and files
 **/*
-## add back *.go files with !(not ignore)
+## add back *.go files
 !/**/*.go
-#!**/
+!**/
 !BOOKNAME
+**/gopl.io/
+
