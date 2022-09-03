@@ -11,6 +11,7 @@ func main () {
 }
 
 func newInt1() *int {
+	// new(type) returns new memory location for the type
 	return new(int)
 }
 
@@ -19,8 +20,6 @@ func newInt2() *int {
 	return  &dummy
 }
 
-func delta(old, new int) int { // 'new' as an argument in a function is now just a variable name
+func delta(old, new int) int {
 	return new - old
 }
-
-

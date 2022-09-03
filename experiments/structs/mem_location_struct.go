@@ -11,8 +11,7 @@ func main() {
 	// create p1
 	p1 := person{"Bob", 20}
 	fmt.Println(p1)
-	fmt.Println(&p1) // ??
-	fmt.Println("\n")
+	fmt.Println(&p1, "\n") // ??
 
 	// create p2
 	p2 := &person{"Ann", 30}
