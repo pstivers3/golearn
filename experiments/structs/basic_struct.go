@@ -12,5 +12,5 @@ func main() {
 	}
 
 	fmt.Println(record)
-
+	fmt.Printf("%s is %d years old\n", record.Name, record.Age)
 }
