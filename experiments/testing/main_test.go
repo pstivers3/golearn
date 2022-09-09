@@ -3,13 +3,13 @@
 // To run, go test
 // Assert should fail with passord of at least 5 characters.
 // However it passes.
+package main
 
-import(
+import (
 	"testing"
+
 	"github.com/stretchr/testify/assert"
 )
-
-
 
 func TestPassword_Validate(t *testing.T) {
 	p := Password("321123")

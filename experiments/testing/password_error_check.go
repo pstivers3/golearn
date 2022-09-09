@@ -13,9 +13,9 @@ func (p Password) Validate() error {
 	return nil
 }
 
-func main () {
+func main() {
 	password := Password("123")
 	if err := password.Validate(); err != nil {
 		panic(err)
-	} 
+	}
 }
