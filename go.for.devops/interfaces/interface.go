@@ -35,6 +35,9 @@ func PrintStringer(s Stringer) {
 func main() {
 	john := Person{First: "John", Last: "Doak"}
 	var nameList Stringer = StrList{"David", "Sarah"}
-	PrintStringer(john)     // Prints: Doak,John
-	PrintStringer(nameList) // Prints: David,Sarah
+	var stringList Stringer = StrList{"Go", "tell", "it", "on", "the", "maountain."}
+	PrintStringer(john)       // Prints: Doak,John
+	PrintStringer(nameList)   // Prints: David,Sarah
+	PrintStringer(nameList)   // Prints: David,Sarah
+	PrintStringer(stringList) // Prints: Go,tell,it,on,the,moutain.
 }
